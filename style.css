@@ -1,0 +1,195 @@
+:root {
+    --primary-bg-color: #f1f1f1;
+    --secondary-bg-color: #c2c2c2;
+    --main-text-color: #333;
+    --main-border-color: #000;
+    --button-bg-color: #ff5a60;
+    --button-text-color: #fff;
+    --button-padding: 12px 20px;
+    --border-radius: 4px;
+    --transition-duration: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    /* border: 2px solid var(--main-border-color); */
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+    overflow: scroll;
+}
+
+#titleBar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    /* border-bottom: 2px solid var(--main-border-color); */
+}
+
+h1 {
+    flex: 1;
+    text-align: center;
+    color: var(--main-text-color);
+    font-size: 24px;
+}
+
+#buttonBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 2px solid #ccc;
+}
+
+button {
+    display: block;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    min-width: 100px;
+    padding: var(--button-padding);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+}
+
+button:hover {
+    background-color: #ff7a7f;
+}
+
+#taskList {
+    list-style: none;
+    padding: 1rem;
+    gap: 1rem;
+    overflow-y: auto;
+}
+
+.task{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: var(--secondary-bg-color);
+    color: var(--main-text-color);
+    border-radius: var(--border-radius);
+    word-break: break-all;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.delete-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity var(--transition-duration);
+}
+
+.delete-icon:hover {
+    opacity: 1;
+}
+
+/* Form Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 300px;
+    padding: 1rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close{
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.exit {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--button-padding);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+}
+
+.submit-btn:hover {
+    background-color: #ff7a7f;
+}
