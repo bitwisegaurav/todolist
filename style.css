@@ -59,7 +59,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-top: 2px solid #ccc;
+    box-shadow: 0px -10px 10px 0 rgb(255,255,255);
 }
 
 button {
